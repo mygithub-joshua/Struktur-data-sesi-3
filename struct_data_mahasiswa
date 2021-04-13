@@ -1,0 +1,66 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+struct Mahasiswa {
+  string nim;
+  string nama;
+  struct Alamat;
+  struct TanggalLahir;
+};
+
+struct Alamat {
+  string namajalan;
+    string nomorrumah;
+  string kota;
+  string provinsi;
+};
+
+struct TanggalLahir {
+  string tempatlahir;
+  string tggllahir;
+};
+ 
+int main()
+{
+  struct Mahasiswa siswa01;
+  struct Alamat almt;
+  struct TanggalLahir tgl;
+ 
+  cout << "======== Data Mahsiswa Baru ========" << endl;
+  cout << "Nim: ";
+  getline(cin,siswa01.nim);
+ 
+  cout << "Nama: ";
+  getline(cin,siswa01.nama);
+ 
+  cout << "Alamat Rumah: ";
+  getline(cin,almt.namajalan);
+  
+  cout << "Nomor Rumah: ";
+  getline(cin,almt.nomorrumah);
+  
+  cout << "Kota: ";
+  getline(cin,almt.kota);
+  
+  cout << "Provinsi: ";
+  getline(cin,almt.provinsi);
+  
+  cout << "Tempat Lahir: ";
+  getline(cin,tgl.tempatlahir);
+  
+  cout << "Tanggal (dd-mm-yyyy): ";
+  getline(cin,tgl.tggllahir);
+  
+ 
+  cout << endl;
+  
+  cout<<"DATA MAHASISWA"<<endl;
+    cout<<"--------------------"<<endl;
+    cout<<"Nim    : "<<siswa01.nim<<endl;
+    cout<<"Nama : "<<siswa01.nama<<endl;
+    cout<<"Alamat : "<< almt.namajalan <<"\tNo. "<<almt.nomorrumah<< ",\tKota : "<<almt.kota <<",\tProvinsi : "<<almt.provinsi<< "\n";
+    cout <<"Tempat, Tanggal Lahir : "<< tgl.tempatlahir <<","<<tgl.tggllahir;
+
+  return 0;
+}
